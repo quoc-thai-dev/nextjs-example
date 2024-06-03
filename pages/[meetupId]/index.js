@@ -16,7 +16,7 @@ export async function getStaticPaths() {
     await client.close();
     console.log(paths);
     return {
-        fallback: false,
+        fallback: "blocking",
         paths: paths,
     }
 }
